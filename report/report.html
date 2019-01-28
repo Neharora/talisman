@@ -1,0 +1,132 @@
+
+	<html>
+		<head>
+			<style>
+				body {
+					background-image: radial-gradient(at center center, rgb(69, 72, 77) 0%, rgb(17, 17, 17) 100%);
+					font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+				}
+				table {
+					border-collapse: collapse;
+			  	}
+				.commits_table, .details {
+					width: 100%;
+				}
+				.report-table {
+					width: 60%;
+					margin: auto;
+					background-color: #DCDCDC;
+				}
+				td, th {
+					border: 1px solid #dddddd;
+					text-align: left;
+					padding: 8px;
+					text-align: center;
+				}
+				.report-table th {
+					background-color: maroon;
+				}
+				.report-table > tbody > tr > td {
+					border: 1px solid grey;
+				}
+				.failure-message {
+					width: 450px;
+				}
+				.heading {
+					height: 100px;
+					align-content: center;
+				}
+				#message {
+					margin-right: 40%;
+				}
+				.details > tbody > tr > td {
+					border: 2px solid #A9A9A9;
+					width: 60%;
+				}
+				#file-path {
+					width: 25%;
+				}
+				#heading {
+					font-size: 40px;
+					font-weight: 300;
+					color: lightgrey;
+					text-align: center;
+					margin-top: 3%;
+				}
+			</style>
+			<title>Talisman Report</title>
+		</head>
+		<body>
+			<h1 id="heading">Talisman Scan Report</h1>
+			<div>
+				<table class="report-table">
+					<tr>
+						<th id="file-path">File Path</th>
+						<th>
+							<span id="message">Message</span>
+							<span>Commits</span>
+						</th>
+					</tr>
+					
+					<tr>
+						<td>asdf.pem</td>
+						<td>
+							<table class="details">
+									<tr>
+										<td class="failure-message">[The file name &#34;asdf.pem&#34; failed checks against the pattern ^.&#43;\.pem$]</td>
+										<td>
+											<table class="commits-table">
+												
+													<tr><td>150e2b756987b300716da85de074c428dbb5e6cb</td></tr>
+												
+													<tr><td>24d2103f126ddabf91d66bbb4519cc5d1536024c</td></tr>
+												
+													<tr><td>1381d30253efad876bcf28b01bc482fd242c8f2b</td></tr>
+												
+													<tr><td>6f67e7da18660c7980648e35df7e61e7737a6c00</td></tr>
+												
+											</table>
+										</td>
+									</tr>
+								
+							</table>
+						</td>
+					</tr>
+					
+					<tr>
+						<td>something.txt</td>
+						<td>
+							<table class="details">
+								
+									<tr>
+										<td class="failure-message">[Potential secret pattern : password=&#34;asdfasdfasdf&#34;]</td>
+										<td>
+											<table>
+												
+													<tr><td>1381d30253efad876bcf28b01bc482fd242c8f2b</td></tr>
+												
+											</table>
+										</td>
+									</tr>
+								
+									<tr>
+										<td class="failure-message">[Potential secret pattern : password=&#34;asdfasdfasdf&#34;]</td>
+										<td>
+											<table>
+												
+													<tr><td>150e2b756987b300716da85de074c428dbb5e6cb</td></tr>
+												
+													<tr><td>24d2103f126ddabf91d66bbb4519cc5d1536024c</td></tr>
+												
+											</table>
+										</td>
+									</tr>
+								
+							</table>
+						</td>
+					</tr>
+					
+				</table>
+			</div>
+		</body>
+	</html>
