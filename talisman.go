@@ -58,6 +58,13 @@ func main() {
 		os.Exit(0)
 	}
 
+	if flag.NFlag() == 0 {
+		fmt.Println(
+			"Usage \"talisman [option]\"\nOptions:\n\t\"-scan\" -> scan git history\n\t\"-v\" -> check Talisman version",
+		)
+		os.Exit(0)
+	}
+
 	_options := options{
 		debug:   fdebug,
 		githook: githook,
